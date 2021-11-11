@@ -1,0 +1,42 @@
+.button {
+  @include font(44px, 700, 48px);
+  padding: $indent * 3 $indent * 10;
+  color: #FFFFFF;
+  text-shadow: 0 2px 3px #000000;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 20px rgba(69, 44, 31, 0.64));
+  background: linear-gradient(to top, rgb(204, 18, 0), rgb(252, 144, 0));
+  border-radius: 15px;
+
+  &:hover {
+    background: linear-gradient(to bottom, rgb(204, 18, 0), rgb(252, 144, 0));
+  }
+
+  &_small {
+    font-size: 36px;
+    padding-top: $indent * 2;
+    padding-bottom: $indent * 2;
+  }
+
+  @include tablet {
+    font-size: 36px;
+    padding-top: $indent * 2;
+    padding-bottom: $indent * 2;
+
+    &_small {
+      font-size: 32px;
+      padding: 15px 90px;
+    }
+  }
+
+  @include mobile {
+    font-size: 32px;
+    padding: 15px 90px;
+
+    &_small {
+      font-size: 32px;
+      padding: 10px 78px;
+    }
+  }
+}

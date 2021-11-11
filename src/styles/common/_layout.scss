@@ -1,0 +1,41 @@
+body {
+  padding: 0;
+  margin: 0;
+  color: $defaultFontColor;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+
+  @include mobile {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.screen {
+  margin-top: -$indent * 4;
+  min-height: 100vh;
+  position: relative;
+  border-radius: $indent * 4 $indent * 4 0 0;
+  overflow: hidden;
+
+  &_min-height_auto {
+    min-height: auto;
+  }
+
+  &_overflow_visible {
+    overflow: visible;
+  }
+
+  @include tablet {
+    min-height: auto;
+  }
+}

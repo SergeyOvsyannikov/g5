@@ -1,0 +1,16 @@
+@import "common/variables";
+@import "common/adaptive-rules";
+@import "common/fonts";
+@import "common/layout";
+
+@import "components/button";
+@import "components/slider";
+@import "components/comment";
+@import "components/animation-item";
+
+@import "sections/header";
+@import "sections/video-block";
+@import "sections/gif-block";
+@import "sections/comments";
+@import "sections/features";
+@import "sections/footer";

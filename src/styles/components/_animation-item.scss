@@ -1,0 +1,20 @@
+.animation-item {
+  opacity: 0;
+
+  &_right {
+    transform: translateX(120%);
+  }
+
+  &_left {
+    transform: translateX(-120%);
+  }
+
+  &_top {
+    transform: translateY(-120%);
+  }
+
+  &_active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,35 @@
+.comments {
+  background: #FFEDD6;
+  padding: $indent * 8 $indent * 8 $indent * 12;
+
+  &__hourglass {
+    position: absolute;
+    top: -$indent * 6;
+    z-index: 2;
+
+    &-img {
+      transition: $defaultTransition;
+    }
+  }
+
+  @include tablet {
+    &__hourglass {
+
+      &-img {
+        width: 130px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding-right: 0;
+    padding-left: 0;
+
+    &__hourglass {
+      left: 0;
+      &-img {
+        width: 100px;
+      }
+    }
+  }
+}

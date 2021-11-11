@@ -1,0 +1,107 @@
+.header {
+  background: url('../images/header-bg.png') no-repeat center top;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $indent * 6 0;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__logo-container {
+    margin-bottom: $indent * 10;
+  }
+
+  &__logo {
+    width: 409px;
+    height: 193px;
+    transition: transform .6s cubic-bezier(.47,1.64,.41,.8), opacity .4s;
+  }
+
+  &__description {
+    @include font(40px, 500, 44px);
+    color: #FFFFFF;
+    margin-top: $indent * 11;
+  }
+
+  &__eva {
+    position: absolute;
+    bottom: -15px;
+    left: $indent * 9;
+  }
+
+  &__eva-img {
+    max-width: 362px;
+    max-height: 531px;
+    height: auto;
+    width: auto;
+    filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.64));
+    transition: $defaultTransition;
+  }
+
+  &__mj {
+    position: absolute;
+    bottom: $indent * 9;
+    right: $indent * 9;
+  }
+
+  &__mj-img {
+    transition: $defaultTransition;
+  }
+
+  @include tablet {
+    height: auto;
+
+    &__eva {
+      left: 0;
+    }
+
+    &__mj {
+      right: 0;
+    }
+  }
+
+  @include mobile {
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+    &__content {
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+    &__logo-container {
+      position: absolute;
+      top: 20px;
+    }
+
+    &__logo {
+      width: 170px;
+      height: auto;
+    }
+
+    &__description {
+      margin-top: 16px;
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    &__eva-img {
+      width: 225px;
+    }
+
+    &__mj-img {
+      width: 233px;
+    }
+  }
+}

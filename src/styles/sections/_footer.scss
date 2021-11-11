@@ -1,0 +1,122 @@
+.footer {
+  background: url("../images/india.png") no-repeat right top;
+  background-size: cover;
+  padding: $indent * 8 $indent * 8 $indent * 4;
+
+  &__heading {
+    @include font(55px, 700, 66px);
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    @include font(18px, 500, 28px);
+    color: #FFFFFF;
+    margin-bottom: 24px;
+    max-width: 350px;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 350px;
+    margin-bottom: $indent * 11;
+  }
+
+  &__link {
+    svg {
+      fill: #FFFFFF;
+      transition: fill .2s;
+    }
+
+    &_fb:hover svg {
+      fill: #3b5998;
+    }
+
+    &_twitter:hover svg {
+      fill: #00ACEE;
+    }
+
+    &_youtube:hover svg {
+      fill: #C4302B;
+    }
+
+    &_inst:hover svg {
+      fill: #e95950;
+    }
+  }
+
+  &__credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+  }
+
+  &__company {
+    margin-right: $indent * 2;
+    @include font(16px, 400, 19px);
+    color: #FFFFFF;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__credits-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 16px;
+  }
+
+  &__credits-item {
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__credits-link {
+    @include font(16px, 400, 19px);
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  @include tablet {
+    &__heading {
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 16px;
+    }
+  }
+
+  @include mobile {
+    padding: 60px 0 24px;
+
+    &__credits {
+    }
+
+    &__copyright {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__company {
+      white-space: nowrap;
+    }
+
+    &__credits-links {
+      flex-wrap: wrap;
+    }
+  }
+}

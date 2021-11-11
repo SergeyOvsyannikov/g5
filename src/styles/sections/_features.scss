@@ -1,0 +1,76 @@
+.features {
+  background: url("../images/wooden.png") no-repeat center top;
+  background-size: cover;
+  padding: $indent * 8 $indent * 8 $indent * 16;
+
+  &__header {
+    @include font(30px, 700, 44px);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: $indent * 4;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    margin-right: $indent * 3;
+  }
+
+  &__item-text {
+    @include font(18px, 500, 28px);
+    max-width: 540px;
+  }
+
+  @include tablet {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__img {
+      max-width: 244px;
+      margin-top: $indent * 2;
+    }
+  }
+
+  @include mobile {
+    padding: 60px 0;
+
+    &__header {
+      margin-bottom: 16px;
+    }
+
+    &__icon {
+      width: 50px;
+      height: auto;
+    }
+
+    &__item-text {
+      font-size: 16px;
+      line-height: 24px;
+      //max-width: 200px;
+    }
+
+    &__img {
+      width: 166px;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.gif-block {
+  background: url("../images/fuji.png") no-repeat center top;
+  background-size: cover;
+  padding: $indent * 8 $indent * 8 $indent * 12;
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__gif-container {
+    margin-right: $indent * 3;
+    position: relative;
+  }
+
+  &__placeholder {
+    border: 3px solid #FFFFFF;
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.639));
+    border-radius: 40px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__text-content {
+    text-align: center;
+    position: relative;
+  }
+
+  &__icon {
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.64));
+  }
+
+  &__header {
+    @include font(30px, 700, 44px);
+    margin-top: $indent * 2;
+    margin-bottom: $indent;
+  }
+
+  &__text {
+    @include font(24px, 500, 36px);
+    margin-bottom: $indent * 2;
+  }
+
+  &__cloud-1 {
+    position: absolute;
+    top: -$indent * 3;
+    right: 90%;
+
+    &-img {
+      transition: $defaultTransition;
+    }
+  }
+
+  &__cloud-2 {
+    position: absolute;
+    top: -$indent * 3;
+    left: 60%;
+
+    &-img {
+      transition: $defaultTransition;
+    }
+  }
+
+  @include tablet {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__gif-container {
+      margin-right: 0;
+      margin-bottom: $indent * 4;
+      width: 479px;
+      max-width: 100%;
+    }
+
+    &__header {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &__cloud-1 {
+
+      &-img {
+        width: 201px;
+      }
+    }
+
+    &__cloud-2 {
+      left: 100%;
+
+      &-img {
+        width: 263px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 60px 0 140px;
+
+    &__gif-container {
+      margin-bottom: 20px;
+      position: static;
+    }
+
+    &__cloud-1 {
+      right: auto;
+      left: 0;
+      top: 0;
+
+      &-img {
+        width: 122px;
+      }
+    }
+
+    &__text-content {
+      position: static;
+    }
+
+    &__cloud-2 {
+      top: 0;
+      right: -20px;
+      left: auto;
+
+
+      &-img {
+        width: 151px;
+      }
+    }
+  }
+}
